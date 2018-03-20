@@ -1,14 +1,14 @@
 <html>
 <head>
 <script>    
-let url = (new URL(window.location)).searchParams;
+const url = (new URL(window.location)).searchParams;
 let postId = url.get("postId");
 let userId = url.get("userId");
     
-       if (url.get("postId") !== null) { 
+       if (postId !== null) { 
            renderPostPage(postId);
        }
-       else if (url.get("userId") !== null) { 
+       else if (userId !== null) { 
            renderAuthorPage(userId);
        }    
        else {
